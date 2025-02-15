@@ -104,6 +104,8 @@ def all_modules() -> dict[str, Callable[[Path, Path], Module]]:
     from lib.modules.custota import CustotaModule
     from lib.modules.msd import MSDModule
     from lib.modules.oemunlockonboot import OEMUnlockOnBootModule
+    from lib.modules.lesseraudio import LesserAudioModule
+
 
     return {
         'alterinstaller': AlterInstallerModule,
@@ -111,4 +113,5 @@ def all_modules() -> dict[str, Callable[[Path, Path], Module]]:
         'custota': CustotaModule,
         'msd': MSDModule,
         'oemunlockonboot': OEMUnlockOnBootModule,
+        'lesseraudio': LesserAudioModule
     }
