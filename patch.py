@@ -200,7 +200,7 @@ def run(args: argparse.Namespace, temp_dir: Path):
         zip_path: Path | None = getattr(args, f'module_{name}')
         sig_path: Path | None = getattr(args, f'module_{name}_sig')
 
-        if zip_path is None or sig_path is None:
+        if zip_path is None:
             continue
 
         module = constructor(zip_path, sig_path)
