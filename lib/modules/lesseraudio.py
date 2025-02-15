@@ -44,7 +44,7 @@ class LesserAudioModule(Module):
         logger.info(f'Injecting Lesser Audio: {self.zip}')
 
         system_fs = ext_fs['system']
-        with zipfile.ZipFile(module_zip, 'r') as z:
+        with zipfile.ZipFile(self.zip, 'r') as z:
             for path in z.namelist():
                 if not path.endswith('.apk') and not path.endswith('.xml'):
                     continue
